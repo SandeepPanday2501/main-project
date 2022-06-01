@@ -1,4 +1,10 @@
-﻿<div class="content">
+﻿@{
+    if (Session["username"] == null)
+    {
+        Response.Redirect("~/usrlogin/userindex");
+    }
+}
+<div class="content">
     <div class="section group">
         <div class="col span_1_of_3">
             <div class="contact_info">

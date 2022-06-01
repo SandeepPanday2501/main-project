@@ -1,0 +1,19 @@
+﻿@model DMS.DAL.DatabaseContext.user_SignUp
+@{
+    ViewBag.Title = "userindex";
+    Layout = null;
+}
+
+<h2>userindex</h2>
+<form action="@Url.Action("userlgn","usrlogin")" method="post">
+    <label>Username</label>
+    <input type="text" name="username" value="" autocomplete="off" /><br />
+    <label>Password</label>
+    <input type="password" name="password" value="" autocomplete="off" /><br />
+    <label style="color:red;">@Html.DisplayFor(x => x.loginerrorMessage)</label><br /><br />
+    <a href="@Url.Action("usersign","UsrSignUp")">SignUp</a><br /><br />
+    <input type="submit" name="submit" value="submit" />
+</form>
+<script src="~/Scripts/jquery-1.11.0.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

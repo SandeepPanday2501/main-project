@@ -1,5 +1,11 @@
 ﻿@{
     Layout = "~/Views/Shared/_Layout.cshtml";
+    
+        if (Session["username"] == null)
+        {
+            Response.Redirect("~/usrlogin/userindex");
+        }
+    
 }
 <link href="~/Content/NewFolder1/css/style.css" rel="stylesheet" />
 
